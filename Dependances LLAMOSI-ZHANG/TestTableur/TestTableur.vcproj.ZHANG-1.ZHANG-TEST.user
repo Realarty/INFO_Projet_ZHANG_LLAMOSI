@@ -9,7 +9,7 @@
 			Name="Debug|Win32"
 			>
 			<DebugSettings
-				Command=""
+				Command="$(TargetPath)"
 				WorkingDirectory=""
 				CommandArguments=""
 				Attach="false"
@@ -22,7 +22,7 @@
 				SQLDebugging=""
 				Environment=""
 				EnvironmentMerge="true"
-				DebuggerFlavor="0"
+				DebuggerFlavor=""
 				MPIRunCommand=""
 				MPIRunArguments=""
 				MPIRunWorkingDirectory=""
@@ -37,7 +37,7 @@
 			Name="Release|Win32"
 			>
 			<DebugSettings
-				Command=""
+				Command="$(TargetPath)"
 				WorkingDirectory=""
 				CommandArguments=""
 				Attach="false"
