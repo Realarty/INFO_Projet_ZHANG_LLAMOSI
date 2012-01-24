@@ -1,0 +1,9 @@
+Partie I
+
+3. Le destructeur est taggé "virtual" car il n'a de sens que pour les classes dérivées de INode.
+
+
+
+6. La classe sumnode prends l'ownership des nodes -> ? Veut dire que la destruction de la classe détruit les nodes? (pas de sens)
+
+10. Faite

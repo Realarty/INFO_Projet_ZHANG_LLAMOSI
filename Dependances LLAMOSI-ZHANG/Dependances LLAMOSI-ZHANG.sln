@@ -1,12 +1,9 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 10.00
-# Visual Studio 2008
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Tableur", "Tableur\Tableur.vcproj", "{66AE36CF-E35B-4F22-9F39-50D39F792C4E}"
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Tableur", "Tableur\Tableur.vcxproj", "{66AE36CF-E35B-4F22-9F39-50D39F792C4E}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TestTableur", "TestTableur\TestTableur.vcproj", "{ABEA9A94-4CE4-4652-8863-C18F843A11CB}"
-	ProjectSection(ProjectDependencies) = postProject
-		{66AE36CF-E35B-4F22-9F39-50D39F792C4E} = {66AE36CF-E35B-4F22-9F39-50D39F792C4E}
-	EndProjectSection
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TestTableur", "TestTableur\TestTableur.vcxproj", "{ABEA9A94-4CE4-4652-8863-C18F843A11CB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

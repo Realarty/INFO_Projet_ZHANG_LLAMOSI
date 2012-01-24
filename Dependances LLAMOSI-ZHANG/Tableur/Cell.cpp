@@ -1,6 +1,15 @@
 #include "Cell.h"
+#include "INode.h"
+#include "NodeImpl.h"
+#include "ValueNode.h"
+#include "RefNode.h"
+#include "BinaryNode.h"
+#include "ProductNode.h"
+#include "SumNode.h"
 
-double Value()
+double Cell::Value()
 {
-	return 0.;
+	double FinalValue=0.;
+	FinalValue=(*cel).Value();
+	return FinalValue;
 }
