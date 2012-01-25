@@ -1,19 +1,20 @@
-﻿Build started 24/01/2012 17:57:37.
-     1>Project "C:\Users\Arte\INFO_Projet_ZHANG_LLAMOSI\Dependances LLAMOSI-ZHANG\TestTableur\TestTableur.vcxproj" on node 3 (build target(s)).
-     1>InitializeBuildStatus:
-         Creating "Debug\TestTableur.unsuccessfulbuild" because "AlwaysCreate" was specified.
-       ClCompile:
-         C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I"C:\Users\Arte\INFO_Projet_ZHANG_LLAMOSI\Dependances LLAMOSI-ZHANG\Tableur" /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt testMain.cpp
-         testMain.cpp
-       ManifestResourceCompile:
-         C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"Debug\TestTableur.exe.embed.manifest.res" Debug\TestTableur_manifest.rc 
-       Link:
-         C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Arte\INFO_Projet_ZHANG_LLAMOSI\Dependances LLAMOSI-ZHANG\Debug\TestTableur.exe" /INCREMENTAL /NOLOGO /LIBPATH:"C:\Users\Arte\INFO_Projet_ZHANG_LLAMOSI\Dependances LLAMOSI-ZHANG\TestTableur" Tableur.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\TestTableur.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\Arte\INFO_Projet_ZHANG_LLAMOSI\Dependances LLAMOSI-ZHANG\Debug\TestTableur.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Arte\INFO_Projet_ZHANG_LLAMOSI\Dependances LLAMOSI-ZHANG\Debug\TestTableur.lib" /MACHINE:X86 Debug\TestTableur.exe.embed.manifest.res
-         Debug\testMain.obj
-         "C:\Users\Arte\INFO_Projet_ZHANG_LLAMOSI\Dependances LLAMOSI-ZHANG\Debug\Tableur.lib"
-     1>LINK : fatal error LNK1104: cannot open file 'Tableur.lib'
-     1>Done Building Project "C:\Users\Arte\INFO_Projet_ZHANG_LLAMOSI\Dependances LLAMOSI-ZHANG\TestTableur\TestTableur.vcxproj" (build target(s)) -- FAILED.
+﻿Build started 2012-1-25 1:59:47.
+Project "C:\Documents and Settings\ZHANG-TEST\INFO_PRO\Dependances LLAMOSI-ZHANG\TestTableur\TestTableur.vcxproj" on node 2 (build target(s)).
+InitializeBuildStatus:
+  Creating "Debug\TestTableur.unsuccessfulbuild" because "AlwaysCreate" was specified.
+ClCompile:
+  All outputs are up-to-date.
+ManifestResourceCompile:
+  All outputs are up-to-date.
+Link:
+  All outputs are up-to-date.
+Manifest:
+  All outputs are up-to-date.
+FinalizeBuildStatus:
+  Deleting file "Debug\TestTableur.unsuccessfulbuild".
+  Touching "Debug\TestTableur.lastbuildstate".
+Done Building Project "C:\Documents and Settings\ZHANG-TEST\INFO_PRO\Dependances LLAMOSI-ZHANG\TestTableur\TestTableur.vcxproj" (build target(s)).
 
-Build FAILED.
+Build succeeded.
 
-Time Elapsed 00:00:02.03
+Time Elapsed 00:00:00.20

@@ -53,7 +53,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>C:\Users\Arte\INFO_Projet_ZHANG_LLAMOSI\Dependances LLAMOSI-ZHANG\Debug;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Arte\INFO_Projet_ZHANG_LLAMOSI\Dependances LLAMOSI-ZHANG\Debug;C:\Documents and Settings\ZHANG-TEST\INFO_PRO\Dependances LLAMOSI-ZHANG\Tableur;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>true</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -67,7 +67,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Console</SubSystem>
       <TargetMachine>MachineX86</TargetMachine>
-      <AdditionalLibraryDirectories>C:\Users\Arte\INFO_Projet_ZHANG_LLAMOSI\Dependances LLAMOSI-ZHANG\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Documents and Settings\ZHANG-TEST\INFO_PRO\Dependances LLAMOSI-ZHANG\Tableur\Debug;C:\Documents and Settings\ZHANG-TEST\INFO_PRO\Dependances LLAMOSI-ZHANG\Debug</AdditionalLibraryDirectories>
       <AdditionalDependencies>Tableur.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -90,7 +90,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <TargetMachine>MachineX86</TargetMachine>
-      <AdditionalLibraryDirectories>C:\Users\Arte\INFO_Projet_ZHANG_LLAMOSI\Dependances LLAMOSI-ZHANG\TestTableur;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Documents and Settings\ZHANG-TEST\INFO_PRO\Dependances LLAMOSI-ZHANG\Tableur\Debug</AdditionalLibraryDirectories>
       <AdditionalDependencies>Tableur.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
