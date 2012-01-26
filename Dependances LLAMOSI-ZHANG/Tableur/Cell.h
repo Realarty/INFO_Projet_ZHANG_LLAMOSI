@@ -5,23 +5,33 @@
 #define ExportedByDLL __declspec(dllimport)
 #endif
 
-
-#include "INode.h"
-
-
 // Include Guard
 #ifndef CELL_H
 #define CELL_H
 
+#include "VolatileCell.h"
+class INode;
 
-ExportedByDLL class Cell
+class ExportedByDLL Cell
 {
 public:
-	Cell(void);
-	double Value();
+	//Constructor
+	Cell();
+
+	//Deconstructor
+	~Cell();
+
+	//Methods
+	double Value() const;
+
+	//overloaded operators
+	void operator=(double val);
+	void operator=(Cell &cel);
+	void operator=(VolatileCell &vcel);
 
 private:
-	INode *cel;
+
+	INode * m_cino;
 
 };
 #endif

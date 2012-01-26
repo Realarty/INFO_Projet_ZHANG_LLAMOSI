@@ -3,7 +3,7 @@
 	ProjectType="Visual C++"
 	Version="9.00"
 	Name="Tableur"
-	ProjectGUID="{66AE36CF-E35B-4F22-9F39-50D39F792C4E}"
+	ProjectGUID="{A3163A9B-2E5D-462E-A0AC-7903C2D92A14}"
 	RootNamespace="Tableur"
 	Keyword="Win32Proj"
 	TargetFrameworkVersion="196613"
@@ -171,7 +171,35 @@
 			UniqueIdentifier="{4FC737F1-C7A5-4376-A066-2A32D752A2FF}"
 			>
 			<File
+				RelativePath=".\BinaryNode.cpp"
+				>
+			</File>
+			<File
 				RelativePath=".\Cell.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\INode.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\ProductNode.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\RefNode.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\SumNode.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\ValueNode.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\VolatileCell.cpp"
 				>
 			</File>
 		</Filter>
@@ -210,6 +238,10 @@
 			</File>
 			<File
 				RelativePath=".\ValueNode.h"
+				>
+			</File>
+			<File
+				RelativePath=".\VolatileCell.h"
 				>
 			</File>
 		</Filter>

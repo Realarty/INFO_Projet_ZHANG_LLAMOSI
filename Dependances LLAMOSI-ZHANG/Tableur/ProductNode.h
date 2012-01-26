@@ -1,28 +1,18 @@
-#ifdef TABLEUR_EXPORTS
-#define ExportedByDLL __declspec(dllexport)
-#else
-#define ExportedByDLL __declspec(dllimport)
-#endif
-
-
-
-#include "BinaryNode.h"
-
-
 // Include Guard
 #ifndef PRODUCTNODE_H
 #define PRODUCTNODE_H
 
+#include "BinaryNode.h"
 
-
-class ProductNode : public BinaryNode {
+class ProductNode : public BinaryNode
+{
 public:
-	double Value();
 
-private:
-	
-	
+	//Constructor
+	ProductNode(INode * i1, INode * i2);
 
+	//Methods
+	double Value() const;
 
 };
 

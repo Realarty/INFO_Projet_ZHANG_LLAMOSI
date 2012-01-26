@@ -1,27 +1,23 @@
-#ifdef TABLEUR_EXPORTS
-#define ExportedByDLL __declspec(dllexport)
-#else
-#define ExportedByDLL __declspec(dllimport)
-#endif
-
-#include "NodeImpl.h"
-
-
-
-
 // Include Guard
 #ifndef VALUENODE_H
 #define VALUENODE_H
 
+#include "NodeImpl.h"
 
-class ValueNode : public NodeImpl {
+class ValueNode : public NodeImpl
+{
 public:
-	ValueNode();
-	ValueNode(double val);
+
+	//Constructors
+	ValueNode(double val = 0.);
+
+	//Methods
 	void setValue(double val);
-	double Value();
+	double Value() const;
+
 private:
-	double LiteralValue;
+
+	double m_LiteralValue;
 };
 
 #endif

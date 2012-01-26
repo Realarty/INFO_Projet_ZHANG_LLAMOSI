@@ -1,6 +1,4 @@
 #include "INode.h"
 
-INode::~INode()
-{
-	return;
-}
+//Deconstructors
+INode::~INode(){}

@@ -1,28 +1,18 @@
-#include "Cell.h"
-#include "INode.h"
-#include "NodeImpl.h"
 #include "ValueNode.h"
-#include "RefNode.h"
-#include "BinaryNode.h"
-#include "ProductNode.h"
-#include "SumNode.h"
 
+//Constructors
+ValueNode::ValueNode(double val)
+{
+	m_LiteralValue = val;
+}
+
+//Methods
+double ValueNode::Value() const
+{
+	return m_LiteralValue;
+}
 
 void ValueNode::setValue(double val)
 {
-	LiteralValue = val;
-}
-ValueNode::ValueNode()
-{
-	LiteralValue = 0.;
-}
-
-ValueNode::ValueNode(double val)
-{
-	LiteralValue = val;
-}
-
-double ValueNode::Value()
-{
-	return LiteralValue;
+	m_LiteralValue = val;
 }

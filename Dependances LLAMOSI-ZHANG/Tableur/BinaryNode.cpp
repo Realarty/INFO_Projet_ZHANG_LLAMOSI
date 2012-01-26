@@ -1,21 +1,17 @@
-#include "Cell.h"
-#include "INode.h"
-#include "NodeImpl.h"
-#include "ValueNode.h"
-#include "RefNode.h"
 #include "BinaryNode.h"
-#include "ProductNode.h"
-#include "SumNode.h"
 
-
+//Constructors
 BinaryNode::BinaryNode(INode *cc1, INode *cc2)
 
 {
-	c1=cc1;
-	c2=cc2;
+	m_ino1 = cc1;
+	m_ino2 = cc2;
 }
+
+//Deconstructors
+//Comme BinaryNode prend l'ownership des node que lui passe, il faut les delete pendant destruction
 BinaryNode::~BinaryNode()
 {
-	c1=0;
-	c2=0;
+	delete m_ino1;
+	delete m_ino2;
 }

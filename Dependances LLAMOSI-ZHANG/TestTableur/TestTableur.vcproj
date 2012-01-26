@@ -3,7 +3,7 @@
 	ProjectType="Visual C++"
 	Version="9.00"
 	Name="TestTableur"
-	ProjectGUID="{ABEA9A94-4CE4-4652-8863-C18F843A11CB}"
+	ProjectGUID="{9AF171C4-6B6A-4364-80A4-F4A5228BBDAB}"
 	RootNamespace="TestTableur"
 	Keyword="Win32Proj"
 	TargetFrameworkVersion="196613"
@@ -61,7 +61,9 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
+				AdditionalDependencies="Tableur.lib"
 				LinkIncremental="2"
+				AdditionalLibraryDirectories="..\Debug"
 				GenerateDebugInformation="true"
 				SubSystem="1"
 				TargetMachine="1"
@@ -172,7 +174,7 @@
 			UniqueIdentifier="{4FC737F1-C7A5-4376-A066-2A32D752A2FF}"
 			>
 			<File
-				RelativePath=".\testMain.cpp"
+				RelativePath=".\TestMain.cpp"
 				>
 			</File>
 		</Filter>

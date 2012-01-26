@@ -1,26 +1,18 @@
-#ifdef TABLEUR_EXPORTS
-#define ExportedByDLL __declspec(dllexport)
-#else
-#define ExportedByDLL __declspec(dllimport)
-#endif
-
-
-#include "BinaryNode.h"
-
-
 // Include Guard
 #ifndef SUMNODE_H
 #define SUMNODE_H
 
+#include "BinaryNode.h"
 
-class SumNode : public BinaryNode {
+class SumNode : public BinaryNode
+{
 public:
-	double Value();
 
-private:
-	
-	
+	//Constructor;
+	SumNode(INode * i1, INode * i2);
 
+	//Methods
+	double Value() const;
 
 };
 

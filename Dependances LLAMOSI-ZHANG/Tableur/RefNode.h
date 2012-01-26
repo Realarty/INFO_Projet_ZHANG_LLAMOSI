@@ -1,25 +1,28 @@
-#ifdef TABLEUR_EXPORTS
-#define ExportedByDLL __declspec(dllexport)
-#else
-#define ExportedByDLL __declspec(dllimport)
-#endif
-
-
-#include "NodeImpl.h"
-
-
 // Include Guard
 #ifndef REFNODE_H
 #define REFNODE_H
 
+#include "NodeImpl.h"
 
+class Cell;
 
-class RefNode : public NodeImpl {
+class RefNode : public NodeImpl
+{
 public:
-	RefNode(INode * cel2);
-	double Value();
+
+	//Constructor
+	RefNode(Cell& cel);
+
+	/*
+	 * ctte classe ne redefinit pas le deconstructor
+	 * comme elle ne prend pas l'ownership de la cellule
+	 */
+
+	//Methods
+	double Value() const;
+
 private:
-	INode *cel;
+	Cell& m_cell;
 };
 
 #endif
