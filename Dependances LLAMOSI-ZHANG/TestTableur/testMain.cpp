@@ -59,7 +59,7 @@ int main()
 		Cell * PS  = new Cell[num-1];
 
 		PA[0] = 0;
-		PA[0] = 0;
+		PB[0] = 0;
 		for (int i(0); i < num-1 ; i++)
 		{
 			PS[i] = PA[i] + PB[i];
