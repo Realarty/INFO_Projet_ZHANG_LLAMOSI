@@ -41,6 +41,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
+				AdditionalIncludeDirectories=""
 				PreprocessorDefinitions="WIN32;_DEBUG;_WINDOWS;_USRDLL;TABLEUR_EXPORTS"
 				MinimalRebuild="true"
 				BasicRuntimeChecks="3"
@@ -179,7 +180,19 @@
 				>
 			</File>
 			<File
+				RelativePath=".\DependentImpl.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\IDependent.cpp"
+				>
+			</File>
+			<File
 				RelativePath=".\INode.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\Pointer.cpp"
 				>
 			</File>
 			<File
@@ -217,11 +230,23 @@
 				>
 			</File>
 			<File
+				RelativePath=".\DependentImpl.h"
+				>
+			</File>
+			<File
+				RelativePath=".\IDependent.h"
+				>
+			</File>
+			<File
 				RelativePath=".\INode.h"
 				>
 			</File>
 			<File
 				RelativePath=".\NodeImpl.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Pointer.h"
 				>
 			</File>
 			<File

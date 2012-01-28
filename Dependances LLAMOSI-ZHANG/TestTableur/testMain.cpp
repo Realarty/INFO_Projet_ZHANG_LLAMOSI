@@ -2,7 +2,7 @@
 #include <time.h>
 #include "Cell.h"
 
-#define N 20
+#define N 10
 
 void showCell(char c, int nu, Cell& cell)
 {
