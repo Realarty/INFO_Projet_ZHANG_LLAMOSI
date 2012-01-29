@@ -1,33 +1,32 @@
 #include "Pointer.h"
+#include "NodeImpl.h"
+#include "Cell.h"
 
-//Constructor
-Pointer::Pointer(IDependent& idep):m_idependent(&idep)
+Pointer::Pointer(Cell& cell):m_scel(&cell)
 {
-	m_proxystamp = idep.getUpdateStamp();
+	this->m_proxystamp = 0;
 }
 
-//Deconstructor
 Pointer::~Pointer(void)
 {
 }
 
-//Methods
-stamp_t Pointer::getValue() const
+int Pointer::getValue()
 {
-	return this -> m_proxystamp;
+	return this->m_proxystamp;
 }
 
-void Pointer::setValue(stamp_t stamp)
+void Pointer::setValue(int stamp)
 {
-	this -> m_proxystamp = stamp;
+	this->m_proxystamp = stamp;
 }
 
-IDependent * Pointer::getDependence() const
+Cell * Pointer::getDependence() const
 {
-	return m_idependent;
+	return this->m_scel;
 }
 
 void Pointer::synchronize()
 {
-	this -> m_proxystamp = this -> m_idependent -> getUpdateStamp();
+	this->m_proxystamp = this -> m_scel ->getNode()->getUpdateStamp();
 }

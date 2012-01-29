@@ -4,6 +4,26 @@
 
 #include "BinaryNode.h"
 
+#ifdef WITH_DEPENDENCIES
+
+class SumNode : public BinaryNode
+{
+public:
+
+	//Constructor;
+	SumNode(NodeImpl * i1, NodeImpl * i2, int stamp = 0);
+
+	//Deconstructor;
+	~SumNode();
+
+	//Methods
+	virtual double Value();
+	virtual void update();
+
+};
+
+#else
+
 class SumNode : public BinaryNode
 {
 public:
@@ -16,4 +36,5 @@ public:
 
 };
 
+#endif
 #endif

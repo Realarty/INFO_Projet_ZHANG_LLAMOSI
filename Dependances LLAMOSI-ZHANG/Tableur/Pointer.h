@@ -1,29 +1,23 @@
 #ifndef POINTER_H
 #define POINTER_H
 
-#include "IDependent.h"
+class Cell;
 
 class Pointer
 {
 public:
-
-	//Constructor
-	Pointer(IDependent& idep);
-
-	//Deconstructor
+	Pointer(Cell& cell);
 	~Pointer(void);
 
 	//Methods
-	stamp_t getValue() const;
-	void setValue(stamp_t stamp);
-	IDependent * getDependence() const;
+	int getValue();
+	void setValue(int stamp);
+	Cell * getDependence() const;
 	void synchronize();
 
 private:
-
-	IDependent * m_idependent;
-	stamp_t m_proxystamp;
-
+	Cell * m_scel;
+	int m_proxystamp;
 };
 
 #endif

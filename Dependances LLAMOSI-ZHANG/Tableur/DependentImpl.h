@@ -1,13 +1,12 @@
 #ifndef DEPENDENTIMPL_H
 #define DEPENDENTIMPL_H
 
-#include "idependent.h"
+#include "IDependent.h"
 #include "Pointer.h"
 #include <set>
 
 using namespace std;
 
-//Pour qu'on peut inserer un Pointer dans set par son ordre
 template<>
 struct less<Pointer>
 {
@@ -21,22 +20,23 @@ class DependentImpl : public IDependent
 {
 public:
 
-	//Constructor
-	DependentImpl(void);
-
-	//Deconstructor
+	//DependentImpl(void);
 	~DependentImpl(void);
 
 	//Methods
-	virtual stamp_t getUpdateStamp() const;
-	virtual void addDependencyOn(IDependent& idep);
+	virtual int getUpdateStamp();
+	virtual void addDependencyOn(Cell& cell);
 	virtual void touch();
 	virtual bool isUpToDate();
-	virtual void synchronize();
+	virtual void update();
+	void synchronize();
+	void setUpdateStamp(int stamp);
+	set<Pointer>& getArrowSet();
 
 protected:
 
 	set<Pointer> m_arrowSet;
 };
+
 
 #endif

@@ -1,66 +1,66 @@
 #include "DependentImpl.h"
-
-//Constructor
+#include "NodeImpl.h"
+#include "Cell.h"
+/*
 DependentImpl::DependentImpl(void)
 {
-	this -> m_updatestamp = 0;
 }
-
-//Deconstructor
+*/
 DependentImpl::~DependentImpl(void)
 {
 }
 
+
 //Methods
-stamp_t DependentImpl::getUpdateStamp() const
+int DependentImpl::getUpdateStamp()
 {
-	return this -> m_updatestamp;
+	return this->m_updatestamp;
 }
 
-void DependentImpl::addDependencyOn(IDependent& idep)
+void DependentImpl::addDependencyOn(Cell& cell)
 {
-	Pointer * p = new Pointer(idep);
-	this -> m_arrowSet.insert(*p);
+	Pointer * p = new Pointer(cell);
+	this->m_arrowSet.insert(*p);
 }
 
 void DependentImpl::touch()
 {
-	++(this -> m_updatestamp);
+	++(this->m_updatestamp);
 }
 
 bool DependentImpl::isUpToDate()
 {
-	if(this -> m_arrowSet.empty())
+	set<Pointer>::iterator it;
+	for(it = this->m_arrowSet.begin(); it != this->m_arrowSet.end(); it++)
 	{
-		return true;
-
-	}else{
-		set<Pointer>::iterator it; 
-		for(it = this -> m_arrowSet.begin(); it != this -> m_arrowSet.end(); it++)
-		{
-			if(it -> getValue() != (it -> getDependence() -> getUpdateStamp()))
-			{
-				return false;
-
-			}else if(!(it -> getDependence() -> isUpToDate()))
-			{
-				return false;
-			}
-		}
-		return true;
+		if(it->getDependence()->getNode()->getUpdateStamp() != it->getValue())
+			return false;
+		else if(!(it->getDependence()->getNode()->isUpToDate()))
+			return false;
 	}
+	return true;
 }
 
 void DependentImpl::synchronize()
 {
-	if(!(this -> m_arrowSet.empty()))
+	set<Pointer>::iterator it;
+	for (it = this->m_arrowSet.begin(); it != this->m_arrowSet.end();it++)
 	{
-		set<Pointer>::iterator it; 
-		for(it = this -> m_arrowSet.begin(); it != this -> m_arrowSet.end(); it++)
-		{
-			it -> getDependence() -> synchronize();
-			it -> synchronize();
-		}
+		it -> getDependence() -> getNode() -> synchronize();
+		it -> synchronize();
 	}
 }
 
+set<Pointer>& DependentImpl::getArrowSet()
+{
+	return this->m_arrowSet;
+}
+
+void DependentImpl::update()
+{
+}
+
+void DependentImpl::setUpdateStamp(int stamp)
+{
+	this->m_updatestamp = stamp;
+}

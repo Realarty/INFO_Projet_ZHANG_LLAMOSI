@@ -1,6 +1,14 @@
 #include "IDependent.h"
 
-//Deconstructor
+IDependent::IDependent(void)
+{
+}
+
 IDependent::~IDependent(void)
 {
+}
+
+double IDependent::getPreVal()
+{
+	return this -> m_preVal;
 }

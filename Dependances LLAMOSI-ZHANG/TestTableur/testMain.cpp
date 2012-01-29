@@ -58,8 +58,8 @@ int main()
 		Cell * PB  = new Cell[num];
 		Cell * PS  = new Cell[num-1];
 
-		PA[0] = 0;
-		PB[0] = 0;
+		PA[0] = 1.;
+		PB[0] = 1.;
 		for (int i(0); i < num-1 ; i++)
 		{
 			PS[i] = PA[i] + PB[i];
@@ -68,10 +68,17 @@ int main()
 		}
 
 		P = PA[num-1] * PB[num-1];
-
 		showCell('P',num-1, P);
+
+		/*
+		 * On change un des elements, et on regarde pour verifier si la fonction isUpToDate() est correct
+		 */
+
+		PA[5] = 9;
+
 		start = clock();
-		P.Value();
+		//P.Value();
+		std::cout << "Is it Up To Date : " << P.getNode()->isUpToDate() << std::endl;
 		end = clock();
 		std::cout << "le temps passe pour 'P[" << num-1 << "].Value' : " << end - start << std::endl;
 

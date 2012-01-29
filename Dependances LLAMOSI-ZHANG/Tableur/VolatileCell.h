@@ -9,7 +9,9 @@
 #define VOLATILECELL_H
 
 class Cell;
-class INode;
+#include "NodeImpl.h"
+
+#ifdef WITH_DEPENDENCIES
 
 class ExportedByDLL VolatileCell
 {
@@ -26,11 +28,30 @@ public:
 	ExportedByDLL friend VolatileCell operator*(Cell &c1, Cell &c2);
 
 	//Attributs
-	INode * m_vcino;
+	NodeImpl * m_vcino;
 
 };
 
-//ExportedByDLL VolatileCell operator+(Cell &c1, Cell &c2);
-//ExportedByDLL VolatileCell operator*(Cell &c1, Cell &c2);
+#else
 
+class ExportedByDLL VolatileCell
+{
+public:
+
+	//Constructors
+	VolatileCell(void);
+
+	//Deconstructors
+	~VolatileCell(void);
+
+	//friends overloaded operators
+	ExportedByDLL friend VolatileCell operator+(Cell &c1, Cell &c2);
+	ExportedByDLL friend VolatileCell operator*(Cell &c1, Cell &c2);
+
+	//Attributs
+	NodeImpl * m_vcino;
+
+};
+
+#endif
 #endif

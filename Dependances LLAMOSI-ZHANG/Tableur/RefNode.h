@@ -6,6 +6,33 @@
 
 class Cell;
 
+#ifdef WITH_DEPENDENCIES
+
+class RefNode : public NodeImpl
+{
+public:
+
+	//Constructor
+	RefNode(Cell& cel, int stamp = 0);
+
+	//Deconstructor
+	~RefNode();
+	/*
+	 * ctte classe ne redefinit pas le deconstructor
+	 * comme elle ne prend pas l'ownership de la cellule
+	 */
+
+	//Methods
+	double Value();
+	void update();
+
+private:
+
+	Cell& m_cell;
+};
+
+#else
+
 class RefNode : public NodeImpl
 {
 public:
@@ -25,4 +52,5 @@ private:
 	Cell& m_cell;
 };
 
+#endif
 #endif

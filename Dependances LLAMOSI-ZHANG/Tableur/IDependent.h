@@ -1,25 +1,26 @@
 #ifndef IDEPENDENT_H
 #define IDEPENDENT_H
 
-typedef int stamp_t;
+class Cell;
 
 class IDependent
 {
 public:
-
-	//Deconstructors
+	IDependent(void);
 	virtual ~IDependent(void);
 
-	//Methods
-	virtual stamp_t getUpdateStamp() const = 0;
-	virtual void addDependencyOn(IDependent& idep) = 0;
+	//Pure methods
+	virtual int getUpdateStamp() = 0;
+	virtual void addDependencyOn(Cell& cell) = 0;
 	virtual void touch() = 0;
 	virtual bool isUpToDate() = 0;
-	virtual void synchronize() = 0;
+	virtual void update() = 0;
+	double getPreVal();
 
 protected:
+	int m_updatestamp;
+	double m_preVal;
 
-	stamp_t m_updatestamp;
 };
 
 #endif
